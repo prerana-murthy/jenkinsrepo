@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('deploy') {
       steps {
-        echo 'Deployment with blue ocean'
+        echo 'deployment successful'
       }
     }
 
