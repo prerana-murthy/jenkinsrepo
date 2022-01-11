@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('test') {
-      steps {
-        bat 'mvn -v'
+      parallel {
+        stage('test') {
+          steps {
+            bat 'mvn -v'
+          }
+        }
+
+        stage('paralleltest') {
+          steps {
+            bat 'mvn -v'
+          }
+        }
+
       }
     }
 
